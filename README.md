@@ -43,6 +43,20 @@ Também incluí um arquivo `netlify.toml` com configuração mínima. Para publi
 2. Conecte o repositório `Magnolima90/dgustadoces`
 3. Como o site não tem etapa de build, deixe o comando de build vazio e defina a pasta de publicação como `/` (ou deixe o Netlify usar a configuração de `netlify.toml`).
 
+Automação Netlify via GitHub Actions
+-----------------------------------
+Também incluo um workflow opcional (`.github/workflows/netlify-deploy.yml`) que usa o Netlify CLI para publicar automaticamente na branch `main`. Para usá-lo, adicione dois secrets no repositório:
+
+- `NETLIFY_AUTH_TOKEN` — seu token de API Netlify (crie em https://app.netlify.com/user/applications)
+- `NETLIFY_SITE_ID` — ID do site (disponível na configuração do site no Netlify)
+
+Após adicionar os secrets, qualquer push para `main` acionará o deploy.
+
+Otimização automática de imagens
+--------------------------------
+Um workflow (`.github/workflows/optimize-images.yml`) também está presente: ele usa `imagemin` para otimizar imagens em `fotos/` e grava versões otimizadas em `fotos/optimized`. O workflow tenta commitar as imagens otimizadas automaticamente.
+
+
 
 Licença
 -------
