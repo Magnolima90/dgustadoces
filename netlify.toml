@@ -1,0 +1,9 @@
+[build]
+  # Publicar conteúdo da raiz do repositório (site estático sem etapa de build)
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

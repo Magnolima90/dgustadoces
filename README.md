@@ -30,6 +30,19 @@ Você pode publicar o site em Netlify, Vercel ou GitHub Pages. Exemplos rápidos
 
 - Netlify: crie um novo site e aponte para o repositório GitHub — deploy automático a cada push.
 - GitHub Pages: em `Settings` > `Pages`, selecione a branch `main` e a pasta `/(root)`.
+  
+Automação (GitHub Pages)
+------------------------
+Este repositório já contém um workflow GitHub Actions (`.github/workflows/pages.yml`) que publica automaticamente o conteúdo da branch `main` para o GitHub Pages a cada push. Após o primeiro push, ative o GitHub Pages em `Settings` → `Pages` e selecione `GitHub Actions` como método de publicação, se necessário.
+
+Netlify
+-------
+Também incluí um arquivo `netlify.toml` com configuração mínima. Para publicar no Netlify:
+
+1. Acesse https://app.netlify.com/sites/new
+2. Conecte o repositório `Magnolima90/dgustadoces`
+3. Como o site não tem etapa de build, deixe o comando de build vazio e defina a pasta de publicação como `/` (ou deixe o Netlify usar a configuração de `netlify.toml`).
+
 
 Licença
 -------
