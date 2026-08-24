@@ -21,6 +21,57 @@ function abrirWhatsApp(message) {
     window.open(whatsappUrl, '_blank');
 }
 
+/* ============================================
+   Orçamento Rápido - modal and form handlers
+   ============================================ */
+
+function openQuoteModal() {
+    const modal = document.getElementById('quoteModal');
+    if (!modal) return;
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('active');
+    // focus first input
+    const first = document.getElementById('quoteDate') || document.getElementById('quoteQuantity');
+    if (first) first.focus();
+}
+
+function closeQuoteModal() {
+    const modal = document.getElementById('quoteModal');
+    if (!modal) return;
+    modal.setAttribute('aria-hidden', 'true');
+    modal.classList.remove('active');
+}
+
+function submitQuoteForm() {
+    const date = document.getElementById('quoteDate').value || 'Não informado';
+    const qty = document.getElementById('quoteQuantity').value || 'Não informado';
+    const size = document.getElementById('quoteSize').value || 'Não informado';
+    const flavor = document.getElementById('quoteFlavor').value || 'Não informado';
+    const notes = document.getElementById('quoteNotes').value || '';
+
+    const messageLines = [
+        `Olá Kátia Maria! Solicito um orçamento para:`,
+        `- Data: ${date}`,
+        `- Quantidade: ${qty}`,
+        `- Tamanho/Porções: ${size}`,
+        `- Sabor: ${flavor}`
+    ];
+
+    if (notes.trim()) {
+        messageLines.push(`- Observações: ${notes.trim()}`);
+    }
+
+    const fullMessage = messageLines.join('\n');
+    abrirWhatsApp(fullMessage);
+    closeQuoteModal();
+}
+
+// Close modal on Esc
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeQuoteModal();
+});
+
+
 // ============================================
 // MENU RESPONSIVO
 // ============================================

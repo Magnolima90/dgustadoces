@@ -51,7 +51,7 @@
                     <a href="#" class="cta-button primary-btn" onclick="abrirWhatsApp('Olá! Vim pelo site e gostaria de fazer um pedido'); return false;">
                         Fazer Pedido
                     </a>
-                    <a href="#" class="cta-button secondary-btn" style="margin-left:12px;background:#fff;border:2px solid var(--primary-color);color:var(--dark-color);" onclick="abrirWhatsApp('Olá Kátia Maria, gostaria de um orçamento rápido para um bolo'); return false;">
+                    <a href="#" class="cta-button secondary-btn" style="margin-left:12px;" onclick="openQuoteModal(); return false;">
                         Orçamento Rápido
                     </a>
                 </div>
@@ -338,5 +338,33 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+
+    <!-- Modal Orçamento Rápido -->
+    <div id="quoteModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
+            <h3 id="quoteTitle">Orçamento Rápido</h3>
+            <form id="quoteForm">
+                <label>Data do evento</label>
+                <input type="date" id="quoteDate">
+
+                <label>Quantidade (unidades)</label>
+                <input type="number" id="quoteQuantity" min="1" placeholder="Ex: 1, 10">
+
+                <label>Tamanho / Porções</label>
+                <input type="text" id="quoteSize" placeholder="Ex: 20 fatias, 30 pessoas">
+
+                <label>Sabor</label>
+                <input type="text" id="quoteFlavor" placeholder="Ex: Chocolate, Morango">
+
+                <label>Observações</label>
+                <textarea id="quoteNotes" rows="3" placeholder="Detalhes adicionais, decoração, entrega..."></textarea>
+
+                <div class="modal-actions">
+                    <button type="button" class="cta-button primary-btn" onclick="submitQuoteForm(); return false;">Enviar para WhatsApp</button>
+                    <button type="button" class="cta-button secondary-btn" onclick="closeQuoteModal(); return false;">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
