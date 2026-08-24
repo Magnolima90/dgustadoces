@@ -7,12 +7,16 @@
 // Atualizado para contato: Kátia Maria (informado pelo usuário)
 const WHATSAPP_NUMBER = '558592544333'; // Formato: 55 + DDD + Número (sem caracteres especiais)
 
+// Mensagem padrão para o WhatsApp (usada quando nenhuma mensagem é passada)
+const DEFAULT_WHATSAPP_MESSAGE = 'Olá Kátia Maria! Gostaria de fazer um pedido ou solicitar um orçamento.';
+
 /**
  * Abre o WhatsApp com uma mensagem pré-preenchida
  * @param {string} message - Mensagem padrão
  */
-function abrirWhatsApp(message = 'Olá! Vim pelo site e gostaria de fazer um pedido') {
-    const encodedMessage = encodeURIComponent(message);
+function abrirWhatsApp(message) {
+    const msg = (message && message.trim()) ? message : DEFAULT_WHATSAPP_MESSAGE;
+    const encodedMessage = encodeURIComponent(msg);
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
 }
