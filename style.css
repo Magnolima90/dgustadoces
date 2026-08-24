@@ -300,6 +300,10 @@ p {
     border-radius:8px;
     font-family:var(--font-body);
 }
+.input-error {
+    border-color: #e74c3c !important;
+    box-shadow: 0 6px 14px rgba(231,76,60,0.08);
+}
 .modal-actions {
     display:flex;
     gap:10px;

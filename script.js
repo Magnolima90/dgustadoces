@@ -49,12 +49,26 @@ function submitQuoteForm() {
     const flavor = document.getElementById('quoteFlavor').value || 'Não informado';
     const notes = document.getElementById('quoteNotes').value || '';
 
+    // Validação: Quantidade e Sabor são obrigatórios
+    const qtyInput = document.getElementById('quoteQuantity');
+    const flavorInput = document.getElementById('quoteFlavor');
+    if (!qtyInput.value || Number(qtyInput.value) <= 0) {
+        qtyInput.classList.add('input-error');
+        qtyInput.focus();
+        return alert('Por favor informe a quantidade (unidades).');
+    }
+    if (!flavorInput.value || !flavorInput.value.trim()) {
+        flavorInput.classList.add('input-error');
+        flavorInput.focus();
+        return alert('Por favor informe o sabor desejado.');
+    }
+
     const messageLines = [
         `Olá Kátia Maria! Solicito um orçamento para:`,
         `- Data: ${date}`,
-        `- Quantidade: ${qty}`,
+        `- Quantidade: ${qtyInput.value}`,
         `- Tamanho/Porções: ${size}`,
-        `- Sabor: ${flavor}`
+        `- Sabor: ${flavorInput.value}`
     ];
 
     if (notes.trim()) {
