@@ -3,8 +3,9 @@
 // ============================================
 
 // Configuração do WhatsApp
-// TODO: Substitua pelo número real (incluindo o código do país e DDD)
-const WHATSAPP_NUMBER = '5511999999999'; // Formato: 55 + DDD + Número (sem caracteres especiais)
+// Número real do WhatsApp (incluindo código do país e DDD)
+// Atualizado para contato: Kátia Maria (informado pelo usuário)
+const WHATSAPP_NUMBER = '558592544333'; // Formato: 55 + DDD + Número (sem caracteres especiais)
 
 /**
  * Abre o WhatsApp com uma mensagem pré-preenchida
