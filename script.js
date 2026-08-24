@@ -98,6 +98,7 @@ const navLinks = document.querySelectorAll('.nav-link');
  * Toggle do menu mobile
  */
 function toggleMenu() {
+    if (!navMenu || !menuToggle) return;
     navMenu.classList.toggle('active');
     menuToggle.classList.toggle('active');
 }
@@ -106,16 +107,21 @@ function toggleMenu() {
  * Fecha o menu quando um link é clicado
  */
 function closeMenu() {
+    if (!navMenu || !menuToggle) return;
     navMenu.classList.remove('active');
     menuToggle.classList.remove('active');
 }
 
-// Event listeners do menu
-menuToggle.addEventListener('click', toggleMenu);
+// Event listeners do menu (com checagens)
+if (menuToggle) {
+    menuToggle.addEventListener('click', toggleMenu);
+}
 
-navLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
+if (navLinks && navLinks.length) {
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+}
 
 // Fecha o menu ao clicar fora
 document.addEventListener('click', (e) => {
@@ -157,13 +163,15 @@ fadeElements.forEach(element => {
 
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.boxShadow = 'var(--shadow-light)';
-    }
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+        } else {
+            navbar.style.boxShadow = 'var(--shadow-light)';
+        }
+    });
+}
 
 // ============================================
 // ANIMAÇÃO SUAVE DE SCROLL PARA ÂNCORAS
@@ -178,9 +186,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (href !== '#' && document.querySelector(href)) {
             e.preventDefault();
             const target = document.querySelector(href);
-            const navHeight = navbar.offsetHeight;
+            const navHeight = navbar ? navbar.offsetHeight : 0;
             const targetPosition = target.offsetTop - navHeight;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -225,22 +233,24 @@ function preloadImages() {
 document.addEventListener('DOMContentLoaded', () => {
     // Pré-carrega imagens
     preloadImages();
-    
-    // Log de inicialização (remover em produção)
-    console.log('✨ D\'Gusta Doces - Site carregado com sucesso!');
-    console.log('📱 WhatsApp configurado:', WHATSAPP_NUMBER);
+    // inicialização concluída
+    // console logs removidos para produção
 });
 
 // ============================================
 // VALIDAÇÃO DE PERFORMANCE
 // ============================================
 
-// Monitora o tempo de carregamento
+// Monitora o tempo de carregamento (silencioso — usar para analytics se necessário)
 if (window.performance && window.performance.timing) {
     window.addEventListener('load', () => {
-        const perfData = window.performance.timing;
-        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-        console.log('⚡ Tempo de carregamento:', pageLoadTime + 'ms');
+        try {
+            const perfData = window.performance.timing;
+            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+            // enviar para analytics se desejar
+        } catch (err) {
+            // ignore
+        }
     });
 }
 
