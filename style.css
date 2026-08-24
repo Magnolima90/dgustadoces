@@ -311,6 +311,48 @@ p {
     justify-content:flex-end;
 }
 
+/* ===== Hero CTA adjustments to avoid overlapping the image ===== */
+.hero {
+    position: relative;
+}
+.hero .hero-text {
+    position: relative;
+    z-index: 2;
+}
+.hero .hero-image {
+    position: relative;
+    z-index: 1;
+}
+
+/* Make hero buttons slightly smaller and inline-spaced */
+.hero .cta-button {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    border-radius: 36px;
+}
+.hero .cta-button + .cta-button {
+    margin-left: 10px;
+}
+
+/* Reduce hero image height slightly to avoid overlap on smaller screens */
+.placeholder-logo {
+    height: 320px;
+}
+
+@media (max-width: 900px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+    .placeholder-logo {
+        height: 260px;
+    }
+    .hero .cta-button {
+        width: 100%;
+        display: block;
+        margin-top: 8px;
+    }
+}
+
 .primary-btn {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--dark-color);
