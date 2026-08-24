@@ -1,3 +1,43 @@
+# D'Gusta Doces
+
+> Site institucional para D'Gusta Doces — bolos e doces artesanais.
+
+Descrição curta
+----------------
+Este repositório contém um site estático simples com HTML, CSS e JavaScript para apresentação do negócio D'Gusta Doces. O layout inclui seções de hero, sobre, produtos, galeria e contato com CTA para WhatsApp.
+
+Como visualizar localmente
+-------------------------
+Opções rápidas:
+
+- Abrir `index.html` diretamente no navegador.
+- Usar um servidor local (recomendado):
+
+```powershell
+cd "c:\\Users\\Magno\\Desktop\\@dgustadoces"
+python -m http.server 8000
+# Abra http://localhost:8000
+```
+
+Edição e contribuições
+----------------------
+- Atualize textos e imagens na pasta `fotos/`.
+- Configure o número real do WhatsApp em `script.js` na constante `WHATSAPP_NUMBER`.
+
+Publicação
+---------
+Você pode publicar o site em Netlify, Vercel ou GitHub Pages. Exemplos rápidos:
+
+- Netlify: crie um novo site e aponte para o repositório GitHub — deploy automático a cada push.
+- GitHub Pages: em `Settings` > `Pages`, selecione a branch `main` e a pasta `/(root)`.
+
+Licença
+-------
+Este projeto está aberto para uso e ajustes pessoais. Adicione uma licença se desejar compartilhar publicamente.
+
+Contato
+-------
+Perfil do autor: https://github.com/Magnolima90
 # 🎂 D'Gusta Doces - Landing Page
 
 Uma landing page elegante e responsiva para a confeitaria artesanal **D'Gusta Doces**.
