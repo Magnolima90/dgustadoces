@@ -353,6 +353,74 @@ p {
     }
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 700px) {
+    html, body {
+        font-size: 15px;
+    }
+    .navbar {
+        padding: 0.6rem 0;
+    }
+    .logo {
+        font-size: 1.4rem;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: var(--light-color);
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 20px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu li {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--gray-medium);
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .placeholder-logo {
+        height: 220px;
+        border-radius: 14px;
+    }
+    .hero {
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+    .produtos-grid, .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .produto-card .produto-imagem .imagem-placeholder {
+        font-size: 0.9rem;
+        padding: 18px;
+    }
+    .footer-content {
+        display: block;
+    }
+    .footer-section {
+        margin-bottom: 14px;
+    }
+    .cta-button {
+        font-size: 0.95rem;
+        padding: 10px 16px;
+    }
+}
+
+
 .primary-btn {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--dark-color);
