@@ -57,7 +57,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="placeholder-logo">
-                        <img src="WhatsApp Image 2026-08-24 at 14.34.56.jpeg" alt="D'Gusta Doces Logo">
+                        <img src="fotos/logo.jpg" alt="D'Gusta Doces Logo">
                     </div>
                 </div>
             </div>
@@ -349,12 +349,14 @@
 
                 <label>Quantidade (unidades) *</label>
                 <input type="number" id="quoteQuantity" min="1" placeholder="Ex: 1, 10" required>
+                <div class="field-error" id="errQuantity" aria-live="polite"></div>
 
                 <label>Tamanho / Porções</label>
                 <input type="text" id="quoteSize" placeholder="Ex: 20 fatias, 30 pessoas">
 
                 <label>Sabor *</label>
                 <input type="text" id="quoteFlavor" placeholder="Ex: Chocolate, Morango" required>
+                <div class="field-error" id="errFlavor" aria-live="polite"></div>
 
                 <label>Observações</label>
                 <textarea id="quoteNotes" rows="3" placeholder="Detalhes adicionais, decoração, entrega..."></textarea>

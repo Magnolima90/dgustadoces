@@ -49,18 +49,33 @@ function submitQuoteForm() {
     const flavor = document.getElementById('quoteFlavor').value || 'Não informado';
     const notes = document.getElementById('quoteNotes').value || '';
 
-    // Validação: Quantidade e Sabor são obrigatórios
+    // Validação: Quantidade e Sabor são obrigatórios (inline errors)
     const qtyInput = document.getElementById('quoteQuantity');
     const flavorInput = document.getElementById('quoteFlavor');
+    const errQty = document.getElementById('errQuantity');
+    const errFlavor = document.getElementById('errFlavor');
+    // reset
+    qtyInput.classList.remove('input-error');
+    flavorInput.classList.remove('input-error');
+    if (errQty) errQty.textContent = '';
+    if (errFlavor) errFlavor.textContent = '';
+
+    let hasError = false;
     if (!qtyInput.value || Number(qtyInput.value) <= 0) {
         qtyInput.classList.add('input-error');
-        qtyInput.focus();
-        return alert('Por favor informe a quantidade (unidades).');
+        if (errQty) errQty.textContent = 'Por favor informe a quantidade (unidades).';
+        hasError = true;
     }
     if (!flavorInput.value || !flavorInput.value.trim()) {
         flavorInput.classList.add('input-error');
-        flavorInput.focus();
-        return alert('Por favor informe o sabor desejado.');
+        if (errFlavor) errFlavor.textContent = 'Por favor informe o sabor desejado.';
+        hasError = true;
+    }
+    if (hasError) {
+        // focus first error
+        if (qtyInput.classList.contains('input-error')) qtyInput.focus();
+        else flavorInput.focus();
+        return;
     }
 
     const messageLines = [
