@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Gusta Doces - Bolos e Doces Artesanais</title>
+    <meta name="description" content="Bolos e doces artesanais feitos com carinho. Encomendas personalizadas para qualquer ocasião.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23F7C6D9'/><text x='50' y='65' font-size='60' font-weight='bold' text-anchor='middle' fill='%23000'>♥</text></svg>">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Fixo no Topo -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <span class="logo-text">D'Gusta Doces</span>
+                </div>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="#como-pedir" class="nav-link">Como Pedir</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">D'Gusta Doces</h1>
+                    <p class="hero-subtitle">Doces feitos com carinho,<br>do jeitinho que você imagina</p>
+                    <a href="#" class="cta-button primary-btn" onclick="abrirWhatsApp('Olá! Vim pelo site e gostaria de fazer um pedido'); return false;">
+                        Fazer Pedido
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <div class="placeholder-logo">
+                        <img src="WhatsApp Image 2026-08-24 at 14.34.56.jpeg" alt="D'Gusta Doces Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre fade-in">
+        <div class="container">
+            <h2 class="section-title">Sobre Nós</h2>
+            <div class="sobre-content">
+                <p>
+                    Na D'Gusta Doces, acreditamos que cada bolo e doce é mais que um produto—é uma experiência feita com amor e dedicação. 
+                    Cada receita é cuidadosamente preparada com ingredientes selecionados, pensando sempre no sabor e na qualidade.
+                </p>
+                <p>
+                    Nossos bolos e doces artesanais são criados especialmente para você, respeitando suas preferências e ocasiões especiais. 
+                    Aqui, personalização não é exceção—é a regra!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos/Cardápio Section -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2 class="section-title">Nossos Produtos</h2>
+            
+            <div class="categoria">
+                <h3 class="categoria-title">🎂 Bolos</h3>
+                <div class="produtos-grid">
+                    <div class="produto-card fade-in">
+                        <div class="produto-imagem">
+                            <div class="imagem-placeholder">Bolo de Chocolate</div>
+                        </div>
+                        <div class="produto-info">
+                            <h4 class="produto-nome">Bolo de Chocolate Belga</h4>
+                            <p class="produto-descricao">Chocolate premium com cobertura meia amarga</p>
+                            <p class="produto-preco">R$ --,--</p>
+                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Bolo de Chocolate Belga'); return false;">
+                                Encomendar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="produto-card fade-in">
+                        <div class="produto-imagem">
+                            <div class="imagem-placeholder">Bolo de Morango</div>
+                        </div>
+                        <div class="produto-info">
+                            <h4 class="produto-nome">Bolo de Morango</h4>
+                            <p class="produto-descricao">Massa macia com morango fresco e calda</p>
+                            <p class="produto-preco">R$ --,--</p>
+                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Bolo de Morango'); return false;">
+                                Encomendar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="produto-card fade-in">
+                        <div class="produto-imagem">
+                            <div class="imagem-placeholder">Bolo Red Velvet</div>
+                        </div>
+                        <div class="produto-info">
+                            <h4 class="produto-nome">Bolo Red Velvet</h4>
+                            <p class="produto-descricao">Clássico elegante com cobertura de cream cheese</p>
+                            <p class="produto-preco">R$ --,--</p>
+                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Bolo Red Velvet'); return false;">
+                                Encomendar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="produto-card fade-in">
+                        <div class="produto-imagem">
+                            <div class="imagem-placeholder">Bolo de Cenoura</div>
+                        </div>
+                        <div class="produto-info">
+                            <h4 class="produto-nome">Bolo de Cenoura</h4>
+                            <p class="produto-descricao">Receita tradicional com cobertura de chocolate</p>
+                            <p class="produto-preco">R$ --,--</p>
+                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Bolo de Cenoura'); return false;">
+                                Encomendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <h3 class="categoria-title">🍬 Doces</h3>
+                <div class="produtos-grid">
+                    <div class="produto-card fade-in">
+                        <div class="produto-imagem">
+                            <div class="imagem-placeholder">Brigadeiro Gourmet</div>
+                        </div>
+                        <div class="produto-info">
+                            <h4 class="produto-nome">Brigadeiro Gourmet</h4>
+                            <p class="produto-descricao">Feito com chocolate belga premium</p>
+                            <p class="produto-preco">R$ --,--</p>
+                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar Brigadeiro Gourmet'); return false;">
+                                Encomendar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="produto-card fade-in">
+                        <div class="produto-imagem">
+                            <div class="imagem-placeholder">Docinhos Decorados</div>
+                        </div>
+                        <div class="produto-info">
+                            <h4 class="produto-nome">Docinhos Decorados</h4>
+                            <p class="produto-descricao">Personalizados para sua festa</p>
+                            <p class="produto-preco">R$ --,--</p>
+                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar Docinhos Decorados'); return false;">
+                                Encomendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <h3 class="categoria-title">🎁 Kits Especiais</h3>
+                <div class="produtos-grid">
+                    <div class="produto-card fade-in">
+                        <div class="produto-imagem">
+                            <div class="imagem-placeholder">Kit Aniversário</div>
+                        </div>
+                        <div class="produto-info">
+                            <h4 class="produto-nome">Kit Aniversário</h4>
+                            <p class="produto-descricao">Bolo + decoração + docinhos</p>
+                            <p class="produto-preco">R$ --,--</p>
+                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Kit Aniversário'); return false;">
+                                Encomendar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="produto-card fade-in">
+                        <div class="produto-imagem">
+                            <div class="imagem-placeholder">Kit Casamento</div>
+                        </div>
+                        <div class="produto-info">
+                            <h4 class="produto-nome">Kit Casamento</h4>
+                            <p class="produto-descricao">Bolo de casamento + docinhos</p>
+                            <p class="produto-preco">R$ --,--</p>
+                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Kit Casamento'); return false;">
+                                Encomendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Pedir Section -->
+    <section id="como-pedir" class="como-pedir fade-in">
+        <div class="container">
+            <h2 class="section-title">Como Pedir</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Escolha o Produto</h3>
+                    <p>Navegue por nosso cardápio e escolha o bolo ou doce que mais lhe agrada, ou descreva sua ideia!</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Chame no WhatsApp</h3>
+                    <p>Clique em "Fazer Pedido" e envie uma mensagem para nós com os detalhes da sua encomenda.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Combine os Detalhes</h3>
+                    <p>Discuta personalização, data de entrega, quantidades e forma de pagamento com nosso time.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Aproveite!</h3>
+                    <p>Retire no local ou receba em casa. Seu doce chega com carinho e muito sabor!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galeria de Trabalhos</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item fade-in">
+                    <div class="galeria-imagem">
+                        <div class="imagem-placeholder">Trabalho 1</div>
+                    </div>
+                </div>
+                <div class="galeria-item fade-in">
+                    <div class="galeria-imagem">
+                        <div class="imagem-placeholder">Trabalho 2</div>
+                    </div>
+                </div>
+                <div class="galeria-item fade-in">
+                    <div class="galeria-imagem">
+                        <div class="imagem-placeholder">Trabalho 3</div>
+                    </div>
+                </div>
+                <div class="galeria-item fade-in">
+                    <div class="galeria-imagem">
+                        <div class="imagem-placeholder">Trabalho 4</div>
+                    </div>
+                </div>
+                <div class="galeria-item fade-in">
+                    <div class="galeria-imagem">
+                        <div class="imagem-placeholder">Trabalho 5</div>
+                    </div>
+                </div>
+                <div class="galeria-item fade-in">
+                    <div class="galeria-imagem">
+                        <div class="imagem-placeholder">Trabalho 6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Section -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>D'Gusta Doces</h3>
+                    <p>Bolos e doces artesanais feitos com amor.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Horário de Atendimento</h3>
+                    <p>
+                        Seg - Sex: 09h às 18h<br>
+                        Sáb: 09h às 17h<br>
+                        Dom: Fechado
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Atendimento</h3>
+                    <p>
+                        ✓ Retirada no local<br>
+                        ✓ Delivery disponível
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/dgustadoces" target="_blank" class="social-link" title="Instagram">
+                            📷 Instagram
+                        </a>
+                        <a href="#" class="social-link whatsapp-link" onclick="abrirWhatsApp('Olá! Gostaria de informações'); return false;" title="WhatsApp">
+                            💬 WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 D'Gusta Doces. Todos os direitos reservados. Feito com ♥</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="#" class="whatsapp-float" id="whatsappFloat" onclick="abrirWhatsApp('Olá! Gostaria de informações sobre os produtos'); return false;" title="Chat com D'Gusta Doces">
+        💬
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
