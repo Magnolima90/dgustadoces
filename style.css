@@ -998,4 +998,8 @@ section {
         animation: none !important;
         transition: none !important;
     }
+
+    .fade-in {
+        opacity: 1;
+    }
 }
