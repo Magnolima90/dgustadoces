@@ -710,6 +710,21 @@ section {
     color: var(--dark-color);
 }
 
+.depoimento-video {
+    width: 100%;
+    height: 300px;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.depoimento-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* ============================================
    SEÇÃO GALERIA
    ============================================ */
