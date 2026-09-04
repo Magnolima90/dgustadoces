@@ -639,6 +639,55 @@ section {
 }
 
 /* ============================================
+   SEÇÃO DEPOIMENTOS
+   ============================================ */
+
+.depoimentos {
+    background: var(--gray-light);
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.depoimento-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-color);
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.depoimento-card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-5px);
+}
+
+.depoimento-estrelas {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.depoimento-texto {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.depoimento-autor {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* ============================================
    SEÇÃO GALERIA
    ============================================ */
 
