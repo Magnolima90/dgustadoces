@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="https://dgustadoces.netlify.app/fotos/produto-chocolate.jpg">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23F7C6D9'/><text x='50' y='65' font-size='60' font-weight='bold' text-anchor='middle' fill='%23000'>♥</text></svg>">
@@ -106,7 +106,7 @@
                 <div class="hero-text">
                     <h1 class="hero-title">D'Gusta Doces</h1>
                     <p class="hero-subtitle">Doces feitos com carinho,<br>do jeitinho que você imagina</p>
-                    <a href="#" class="cta-button primary-btn" onclick="abrirWhatsApp('Olá! Vim pelo site e gostaria de fazer um pedido'); return false;">
+                    <a href="https://wa.me/558592544333?text=Ol%C3%A1%20K%C3%A1tia%20Maria!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido" class="cta-button primary-btn" target="_blank" rel="noopener noreferrer" onclick="abrirWhatsApp('Olá! Vim pelo site e gostaria de fazer um pedido'); return false;">
                         Fazer Pedido
                     </a>
                     <a href="#" class="cta-button secondary-btn" style="margin-left:12px;" onclick="openQuoteModal(); return false;">
@@ -140,151 +140,51 @@
     </section>
 
     <!-- Produtos/Cardápio Section -->
-    <section id="produtos" class="produtos">
+    <section id="produtos" class="produtos produtos-chantininho">
         <div class="container">
-            <h2 class="section-title">Nossos Produtos</h2>
-            
-            <div class="categoria">
-                <h3 class="categoria-title">🎂 Bolos</h3>
-                <div class="produtos-grid">
-                    <div class="produto-card fade-in">
-                        <div class="produto-imagem">
-                            <img src="fotos/produto-chocolate.jpg" alt="Bolo de Chocolate Belga" loading="lazy" decoding="async">
-                        </div>
-                        <div class="produto-info">
-                            <h4 class="produto-nome">Bolo de Chocolate Belga</h4>
-                            <p class="produto-descricao">Chocolate premium com cobertura meia amarga</p>
-                            <p class="produto-preco">R$ --,--</p>
-                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Bolo de Chocolate Belga'); return false;">
-                                Encomendar
-                            </button>
-                        </div>
-                    </div>
+            <div class="categoria categoria-lista">
+                <h3 class="categoria-title categoria-title-script">Chantininho</h3>
+                <h4 class="categoria-subtitle">Jamanhos</h4>
 
-                    <div class="produto-card fade-in">
-                        <div class="produto-imagem">
-                            <img src="fotos/produto-morango.jpg" alt="Bolo de Morango" loading="lazy" decoding="async">
-                        </div>
-                        <div class="produto-info">
-                            <h4 class="produto-nome">Bolo de Morango</h4>
-                            <p class="produto-descricao">Massa macia com morango fresco e calda</p>
-                            <p class="produto-preco">R$ --,--</p>
-                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Bolo de Morango'); return false;">
-                                Encomendar
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="produto-card fade-in">
-                        <div class="produto-imagem">
-                            <img src="fotos/produto-redvelvet.jpg" alt="Bolo Red Velvet" loading="lazy" decoding="async">
-                        </div>
-                        <div class="produto-info">
-                            <h4 class="produto-nome">Bolo Red Velvet</h4>
-                            <p class="produto-descricao">Clássico elegante com cobertura de cream cheese</p>
-                            <p class="produto-preco">R$ --,--</p>
-                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Bolo Red Velvet'); return false;">
-                                Encomendar
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="produto-card fade-in">
-                        <div class="produto-imagem">
-                            <img src="fotos/produto-cenoura.jpg" alt="Bolo de Cenoura" loading="lazy" decoding="async">
-                        </div>
-                        <div class="produto-info">
-                            <h4 class="produto-nome">Bolo de Cenoura</h4>
-                            <p class="produto-descricao">Receita tradicional com cobertura de chocolate</p>
-                            <p class="produto-preco">R$ --,--</p>
-                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Bolo de Cenoura'); return false;">
-                                Encomendar
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <ul class="lista-chantininho">
+                    <li><span>12 cm</span> – Rende 8 a 10 fatias – <strong>R$ 90,00</strong></li>
+                    <li><span>14 cm</span> – Rende 10 a 15 fatias – <strong>R$ 120,00</strong></li>
+                    <li><span>16 cm</span> – Rende 15 a 20 fatias – <strong>R$ 150,00</strong></li>
+                    <li><span>18 cm</span> – Rende 20 a 25 fatias – <strong>R$ 180,00</strong></li>
+                    <li><span>20 cm</span> – Renda 25 a 30 fatias – <strong>R$ 230,00</strong></li>
+                </ul>
             </div>
 
-            <div class="categoria">
-                <h3 class="categoria-title">🍬 Doces</h3>
-                <div class="produtos-grid">
-                    <div class="produto-card fade-in">
-                        <div class="produto-imagem">
-                            <img src="fotos/docinhos-decorados.jpg" alt="Docinhos Tradicionais" loading="lazy" decoding="async">
-                        </div>
-                        <div class="produto-info">
-                            <h4 class="produto-nome">Docinhos Tradicionais</h4>
-                            <p class="produto-descricao">Sabores disponíveis:</p>
-                            <ul class="produto-sabores">
-                                <li>Brigadeiro ao leite</li>
-                                <li>Brigadeiro meio amargo</li>
-                                <li>Ninho</li>
-                                <li>Amendoim</li>
-                                <li>Charge</li>
-                                <li>Prestígio</li>
-                                <li>Beijinho</li>
-                            </ul>
-                            <p class="produto-preco">R$ 150,00 <span class="produto-unidade">/ cento</span></p>
-                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar docinhos tradicionais (R$ 150,00 o cento)'); return false;">
-                                Encomendar
-                            </button>
-                        </div>
-                    </div>
+            <div class="catalogo-produtos">
+                <div class="catalogo-texto">
+                    <h4 class="categoria-variacao categoria-variacao-tradicional">Tradicional</h4>
+                    <ul class="lista-variacao">
+                        <li><span>Unidade</span> - <strong>R$1,80</strong> <small>(Pedido mínimo 10 unidades)</small></li>
+                        <li><span>50 Unidades</span> - <strong>R$75,00</strong></li>
+                        <li><span>100 Unidades</span> - <strong>R$140,00</strong></li>
+                    </ul>
 
-                    <div class="produto-card fade-in">
-                        <div class="produto-imagem">
-                            <img src="fotos/brigadeiro-gourmet.jpg" alt="Docinhos Gourmet" loading="lazy" decoding="async">
-                        </div>
-                        <div class="produto-info">
-                            <h4 class="produto-nome">Docinhos Gourmet</h4>
-                            <p class="produto-descricao">Sabores disponíveis:</p>
-                            <ul class="produto-sabores">
-                                <li>Ninho com geleia de maracujá</li>
-                                <li>Romeu e Julieta</li>
-                                <li>Ninho com Nutella</li>
-                                <li>Coco queimado</li>
-                                <li>Casadinho</li>
-                                <li>Churros</li>
-                            </ul>
-                            <p class="produto-preco">R$ 180,00 <span class="produto-unidade">/ cento</span></p>
-                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar docinhos gourmet (R$ 180,00 o cento)'); return false;">
-                                Encomendar
-                            </button>
-                        </div>
+                    <h4 class="categoria-variacao categoria-variacao-recheado">Recheado</h4>
+                    <ul class="lista-variacao">
+                        <li><span>Unidade</span> - <strong>R$3,00</strong> <small>(Pedido mínimo 10 unidades)</small></li>
+                        <li><span>50 Unidades</span> - <strong>R$130,00</strong> <small>(Até 2 sabores)</small></li>
+                        <li><span>100 Unidades</span> - <strong>R$240,00</strong> <small>(Até 4 sabores)</small></li>
+                    </ul>
+
+                    <div class="info-produto">
+                        <h5>Informações:</h5>
+                        <ul>
+                            <li>Tamanho 3x3</li>
+                            <li>Acompanha Forminha Quadrada na cor do tema.</li>
+                            <li>Antecedência mínima de 7 dias.</li>
+                            <li>Confirmação 50% do valor ou pagamento integral!</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <div class="categoria">
-                <h3 class="categoria-title">🎁 Kits Especiais</h3>
-                <div class="produtos-grid">
-                    <div class="produto-card fade-in">
-                        <div class="produto-imagem">
-                            <img src="fotos/kit-aniversario.jpg" alt="Kit Aniversário" loading="lazy" decoding="async">
-                        </div>
-                        <div class="produto-info">
-                            <h4 class="produto-nome">Kit Aniversário</h4>
-                            <p class="produto-descricao">Bolo + decoração + docinhos</p>
-                            <p class="produto-preco">R$ --,--</p>
-                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Kit Aniversário'); return false;">
-                                Encomendar
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="produto-card fade-in">
-                        <div class="produto-imagem">
-                            <img src="fotos/kit-casamento.jpg" alt="Kit Casamento" loading="lazy" decoding="async">
-                        </div>
-                        <div class="produto-info">
-                            <h4 class="produto-nome">Kit Casamento</h4>
-                            <p class="produto-descricao">Bolo de casamento + docinhos</p>
-                            <p class="produto-preco">R$ --,--</p>
-                            <button class="btn-pedido" onclick="abrirWhatsApp('Olá! Gostaria de encomendar o Kit Casamento'); return false;">
-                                Encomendar
-                            </button>
-                        </div>
-                    </div>
+                <div class="catalogo-fotos">
+                    <img src="fotos/WhatsApp Image 2026-09-09 at 08.13.01.jpeg" alt="Chantininho em caixa decorada" loading="lazy">
+                    <img src="fotos/WhatsApp Image 2026-09-09 at 08.13.01 (1).jpeg" alt="Chantininho recheado e decorado" loading="lazy">
                 </div>
             </div>
         </div>
@@ -373,49 +273,32 @@
             <div class="galeria-grid">
                 <div class="galeria-item fade-in">
                     <div class="galeria-imagem">
-                        <img src="fotos/galeria-1.jpg" alt="Bolo personalizado - Trabalho 1" loading="lazy" decoding="async">
+                        <img src="fotos/WhatsApp Image 2026-09-09 at 07.47.40.jpeg" alt="Trabalho da D'Gusta Doces 1" loading="lazy">
                     </div>
                 </div>
                 <div class="galeria-item fade-in">
                     <div class="galeria-imagem">
-                        <img src="fotos/galeria-2.jpg" alt="Bolo personalizado - Trabalho 2" loading="lazy" decoding="async">
+                        <img src="fotos/WhatsApp Image 2026-09-09 at 08.13.01.jpeg" alt="Trabalho da D'Gusta Doces 2" loading="lazy">
                     </div>
                 </div>
                 <div class="galeria-item fade-in">
                     <div class="galeria-imagem">
-                        <img src="fotos/galeria-3.jpg" alt="Bolo personalizado - Trabalho 3" loading="lazy" decoding="async">
+                        <img src="fotos/WhatsApp Image 2026-09-09 at 08.13.01 (1).jpeg" alt="Trabalho da D'Gusta Doces 3" loading="lazy">
                     </div>
                 </div>
                 <div class="galeria-item fade-in">
                     <div class="galeria-imagem">
-                        <img src="fotos/galeria-4.jpg" alt="Bolo personalizado - Trabalho 4" loading="lazy" decoding="async">
+                        <img src="fotos/WhatsApp Image 2026-09-09 at 08.13.01 (2).jpeg" alt="Trabalho da D'Gusta Doces 4" loading="lazy">
                     </div>
                 </div>
                 <div class="galeria-item fade-in">
                     <div class="galeria-imagem">
-                        <img src="fotos/galeria-5.jpg" alt="Bolo personalizado - Trabalho 5" loading="lazy" decoding="async">
+                        <img src="fotos/WhatsApp Image 2026-09-09 at 08.13.01 (3).jpeg" alt="Trabalho da D'Gusta Doces 5" loading="lazy">
                     </div>
                 </div>
                 <div class="galeria-item fade-in">
                     <div class="galeria-imagem">
-                        <img src="fotos/galeria-6.jpg" alt="Bolo personalizado - Trabalho 6" loading="lazy" decoding="async">
-                    </div>
-                </div>
-                <div class="galeria-item fade-in">
-                    <div class="galeria-imagem">
-                        <img src="fotos/galeria-7.jpg" alt="Bolo temático Fortaleza - Aniversário Fabiano" loading="lazy" decoding="async">
-                    </div>
-                </div>
-                <div class="galeria-item fade-in">
-                    <div class="galeria-imagem">
-                        <img src="fotos/galeria-8.jpg" alt="Bolo temático Fortaleza - Aniversário Fabiano" loading="lazy" decoding="async">
-                    </div>
-                </div>
-                <div class="galeria-item fade-in">
-                    <div class="galeria-imagem">
-                        <video src="fotos/galeria-video-fortaleza.mp4" poster="fotos/galeria-7.jpg" controls preload="none" playsinline>
-                            Seu navegador não suporta vídeo. <a href="fotos/galeria-video-fortaleza.mp4">Clique aqui para assistir</a>.
-                        </video>
+                        <img src="fotos/WhatsApp Image 2026-09-09 at 08.14.13.jpeg" alt="Trabalho da D'Gusta Doces 6" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -454,7 +337,7 @@
                         <a href="https://instagram.com/dgustadoces02" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
                             📷 Instagram
                         </a>
-                        <a href="#" class="social-link whatsapp-link" onclick="abrirWhatsApp('Olá! Gostaria de informações'); return false;" title="WhatsApp">
+                        <a href="https://wa.me/558592544333?text=Ol%C3%A1%20K%C3%A1tia%20Maria!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos" class="social-link whatsapp-link" target="_blank" rel="noopener noreferrer" onclick="abrirWhatsApp('Olá! Gostaria de informações sobre os produtos'); return false;" title="WhatsApp">
                             💬 WhatsApp — Kátia Maria
                         </a>
                         <div class="contact-phone" style="margin-top:8px;">
@@ -471,7 +354,7 @@
     </footer>
 
     <!-- Botão Flutuante WhatsApp -->
-    <a href="#" class="whatsapp-float" id="whatsappFloat" onclick="abrirWhatsApp('Olá! Gostaria de informações sobre os produtos'); return false;" title="Chat com D'Gusta Doces">
+    <a href="https://wa.me/558592544333?text=Ol%C3%A1%20K%C3%A1tia%20Maria!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos" class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener noreferrer" onclick="abrirWhatsApp('Olá! Gostaria de informações sobre os produtos'); return false;" title="Chat com D'Gusta Doces">
         💬
     </a>
 
