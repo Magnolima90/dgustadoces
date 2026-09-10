@@ -693,13 +693,6 @@ section {
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
 }
 
-.galeria-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
 .produtos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
