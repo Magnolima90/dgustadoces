@@ -204,6 +204,16 @@ p {
     font-weight: 300;
 }
 
+.hero-text .cta-button {
+    opacity: 0;
+    animation: heroButtonIn 0.6s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-text .cta-button.secondary-btn {
+    animation-delay: 0.65s;
+}
+
 .hero-image {
     text-align: center;
     animation: slideInRight 0.8s ease;
@@ -219,6 +229,7 @@ p {
     justify-content: center;
     overflow: hidden;
     box-shadow: var(--shadow-medium);
+    animation: heroFloat 5s ease-in-out 0.9s infinite;
 }
 
 .placeholder-logo img {
@@ -571,6 +582,12 @@ section {
     align-items: center;
     gap: 0.35rem;
     flex-wrap: wrap;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.lista-chantininho li:hover {
+    transform: translateX(8px);
+    color: #201715;
 }
 
 .lista-chantininho li::before {
@@ -637,6 +654,12 @@ section {
     align-items: center;
     gap: 0.6rem;
     flex-wrap: wrap;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.lista-variacao li:hover {
+    transform: translateX(8px);
+    color: #150f0e;
 }
 
 .lista-variacao li::before {
@@ -691,6 +714,12 @@ section {
     display: block;
     border-radius: 28px;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.catalogo-fotos img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.18);
 }
 
 .produtos-grid {
@@ -1065,6 +1094,26 @@ section {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes heroButtonIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 }
 
