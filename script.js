@@ -173,6 +173,51 @@ fadeElements.forEach(element => {
 });
 
 // ============================================
+// CONTADORES DE ESTATÍSTICAS
+// ============================================
+
+const statNumbers = document.querySelectorAll('.estatistica-numero');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function animateCounter(el) {
+    const target = parseFloat(el.dataset.target);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const suffix = el.dataset.suffix || '';
+
+    if (prefersReducedMotion) {
+        el.textContent = target.toFixed(decimals) + suffix;
+        return;
+    }
+
+    const duration = 1500;
+    const startTime = performance.now();
+
+    function tick(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = (target * eased).toFixed(decimals) + suffix;
+        if (progress < 1) {
+            requestAnimationFrame(tick);
+        }
+    }
+
+    requestAnimationFrame(tick);
+}
+
+if (statNumbers.length) {
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(el => statsObserver.observe(el));
+}
+
+// ============================================
 // NAVBAR FIXA - SCROLL EFEITO
 // ============================================
 
